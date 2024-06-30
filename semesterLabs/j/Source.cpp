@@ -1,23 +1,20 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 int main()
 {
-    int br = 0;
-    int number;
-    cout << "Enter a number: ";
-    cin >> number;
+    setlocale(LC_ALL, "BG");
+    char letter ;
 
-    while (number != 0)
+    while (true)
     {
-        if (number % 7 == 0 || number % 5 == 0)
+        cout << "Въведете малката буква :";
+        cin >> letter;
+
+        if (!(letter >= 97 && letter <= 122))
         {
-            br++;
+            continue;
         }
-       
-
-        cout << "Number: ";
-        cin >> number;
+        cout << "Главната буква - " << (char)(letter - 32) << endl;
     }
-
-    cout << "Numbers : " << br << endl;
 }
